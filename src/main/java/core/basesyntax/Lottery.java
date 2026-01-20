@@ -18,6 +18,7 @@ public class Lottery {
 
     public Ball getRandomBall() {
 
-        return new Ball(supplier.getRandomColor(), random.nextInt(MIN, MAX + 1));
+        return new Ball(supplier.getRandomColor(),
+                random.nextInt(MAX - MIN + 1) + MIN);
     }
 }
